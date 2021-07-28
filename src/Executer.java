@@ -24,6 +24,7 @@ public class Executer {
 					break;
 				case "2":
 					menu2();
+					menu=false;
 					break;
 				case "0":
 					System.out.println("Exiting, thanks for using our search");
@@ -46,29 +47,35 @@ public class Executer {
 			System.out.println("\n\n-----------------------------------------\nWeb Crawling\n-----------------------------------------");
 			System.out.println("Press 1 to enter websites to crawl");
 			System.out.println("Press 2 to crwal the default web pages");
+			System.out.println("Press 3 to Erase the webpages crawled");
 			System.out.println("Press 0 to exit");
 			System.out.println("-----------------------------------------");
 			System.out.print("Select an option: ");
-			int ans = sc.nextInt();
+			String ans = sc.nextLine();
 			
 			switch(ans) {
-				case 1:
-					System.out.print("Enter websites to crawl saperated by a whitespace\n");
+				case "1":
+					System.out.println("Enter websites to crawl saperated by a whitespace\n");
 					WebCrawler.crawlCustom(sc2.nextLine());
 					break;
-				case 2:
-					System.out.print("Executing crawl on default links");
+				case "2":
+					System.out.println("Executing crawl on default links");
 					WebCrawler.crawlDefault();
 					break;
-				case 0:
+				case "3":
+					System.out.println("Wiping WebPages");
+					WebCrawler.wipeWebPages();										
+					break;
+				case "0":
 					System.out.println("Exiting, thanks for using our search");
 					System.exit(0);
 					break;
 				default:
-					System.out.println("Wrong Input, Try again.");
+					System.out.println("Wrong Input!");
 			}
 			menu = false;
 		}
+		System.out.println("Exiting Program.");
 		sc.close();
 		sc2.close();
 	}

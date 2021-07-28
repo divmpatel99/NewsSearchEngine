@@ -125,7 +125,7 @@ public class WebCrawler {
 	}
 	
 	public static void crawlDefault() {
-		String links="https://www.cbc.ca/"+"\n"+"https://www.bbc.com/news/world/us_and_canada";
+		String links="https://www.cbc.ca/"+"\n"+"https://www.bbc.com/news/world/us_and_canada"+"\n"+"https://www.ctvnews.ca/"+"\n"+"https://www.cicnews.com/";
 		crawlPages(links);
 	}
 	public static void crawlCustom(String line) {
@@ -135,6 +135,15 @@ public class WebCrawler {
 			newLine = newLine + link + "\n";
 		}
 		crawlPages(newLine);
+	}
+	
+	public static void wipeWebPages() {
+		File directory = new File("WebPages");
+		File files[] = directory.listFiles();
+		for (File f : files) {
+			f.delete();
+		}
+		System.out.println("WebPages wiped!");
 	}
 	
 	public static void main(String[] args) {
