@@ -11,7 +11,7 @@ public class Executer {
 		while(menu) {
 			System.out.println("\n\n-----------------------------------------\nSearch Engine\n-----------------------------------------");
 			System.out.println("Press 1 to search for a keyword");
-			System.out.println("Press 2 to crawl the pages again(Will take upto 15 minuites to crawl 500 pages)");
+			System.out.println("Press 2 to crawl the pages again (It will take about 15 to 30 minuites to crawl)");
 			System.out.println("Press 0 to exit");
 			System.out.println("-----------------------------------------");
 			System.out.print("Select an option: ");
@@ -46,7 +46,7 @@ public class Executer {
 		while(menu) {
 			System.out.println("\n\n-----------------------------------------\nWeb Crawling\n-----------------------------------------");
 			System.out.println("Press 1 to enter websites to crawl");
-			System.out.println("Press 2 to crwal the default web pages");
+			System.out.println("Press 2 to crawl the default web pages");
 			System.out.println("Press 3 to Erase the webpages crawled");
 			System.out.println("Press 0 to exit");
 			System.out.println("-----------------------------------------");

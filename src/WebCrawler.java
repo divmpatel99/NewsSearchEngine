@@ -12,6 +12,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+//Uses Jsoup to crawl through web and creates text files with parsed information.
 public class WebCrawler {
 	public static String crawl(String link) {
 		
